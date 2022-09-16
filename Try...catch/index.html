@@ -1,0 +1,21 @@
+<script>
+function soma(x, y) {
+   if (typeof x != 'number' || typeof y !== 'number')
+   {
+      //throw( ' x e y precisam ser números');
+      throw new Error('x e y precisam ser números') //funções construtoras
+   }
+
+   return x + y;
+}
+
+//Tratando o erro e capturando erro
+try{
+console.log(soma(1, 2)) //output 3
+console.log(soma('1', 2)) //Aqui puxa a mensagem sem onde é o erro
+
+} catch(err) {
+   //console.log(err)
+   console.log('Lançar algo mais amigável para o usuário')
+}
+</script>
