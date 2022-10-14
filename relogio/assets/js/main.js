@@ -7,7 +7,7 @@ let segundos = 0;
 function inciaRelogio(){
    const timer = setInterval(function() {
       segundos++;
-      relogiobtn.innerHTML = segundos;
+      relogiobtn.innerHTML = criaHoradosSegundos(segundos); //segundos formatados
    }, 1000)
 }
 
