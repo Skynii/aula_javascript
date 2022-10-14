@@ -3,13 +3,18 @@ function mostraHora() {
 
    return data.toLocaleTimeString('pt-BR', {
       hour12: false
-   })
+   });
 }
 
 const timer = setInterval(function() {
    console.log(mostraHora());
-}, 1000); //funcao anonima
+}, 1000); 
 
+//Para a função
 setTimeout(function() {
    clearInterval(timer);
+},3000);
+
+setTimeout(function() {
+   console.log('Olá Mundo')
 },5000)
