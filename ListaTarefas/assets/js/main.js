@@ -7,8 +7,16 @@ function criaLi(){
    return li;
 }
 
+inputTarefa.addEventListener('keypress', function(e){
+   if(e.keyCode === 13){
+      console.log('enter')
+   }
+});
+
 function criaTarefa(textoInput) {
    const li = criaLi()
+   li.innerText = textoInput;
+   tarefas.appendChild(li)
 }  
 
 //*Função anonima

@@ -4,3 +4,4 @@
 
 - [x]Caputurar evento no botão
 - [] função com tarefa com texto
+- []colocar evento no eneter com keypress
