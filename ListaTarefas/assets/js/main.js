@@ -9,7 +9,8 @@ function criaLi(){
 
 inputTarefa.addEventListener('keypress', function(e){
    if(e.keyCode === 13){
-      console.log('enter')
+      if (!inputTarefa.value) return;
+      criaTarefa(inputTarefa.value);
    }
 });
 
