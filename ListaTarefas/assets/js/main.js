@@ -23,6 +23,7 @@ function criaBtnApagar(li) {
    li.innerText += ' ';
    const btnApagar = document.createElement('button');
    btnApagar.innerText = 'Apagar';
+   btnApagar.setAttribute('class', 'apagar')
    li.appendChild(btnApagar);
 
 }
@@ -40,3 +41,11 @@ btnTarefa.addEventListener('click', function() {
    if (!inputTarefa.value) return
    criaTarefa(inputTarefa.value);
 });
+
+document.addEventListener('click', function(e) {
+   const el = e.target;
+
+   if (el.classList.contains('apagar')){
+      console.log('apagar Clicado')
+   }
+})
