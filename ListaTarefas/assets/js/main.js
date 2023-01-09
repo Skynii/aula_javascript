@@ -2,9 +2,14 @@ const inputTarefa = document.querySelector('.input-tarefa');
 const btnTarefa = document.querySelector('.btn-tarefa');
 const tarefas = document.querySelector('.tarefas');
 
-function criaTarefa(textoInput) {
-   console.log(textoInput)
+function criaLi(){
+   const li =document.createElement('li')
+   return li;
 }
+
+function criaTarefa(textoInput) {
+   const li = criaLi()
+}  
 
 //*Função anonima
 btnTarefa.addEventListener('click', function() {
