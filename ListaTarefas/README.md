@@ -1,0 +1,6 @@
+# [x]Resolver Index HTML
+
+- [x]JS criar consts
+
+- [x]Caputurar evento no botão
+- [] função com tarefa com texto

@@ -1,44 +1,58 @@
-const iniciarBtn = document.querySelector(".iniciar");
-const pausarBtn = document.querySelector(".pausar");
-const zerarBtn = document.querySelector(".zerar");
-const relogiobtn = document.querySelector(".relogio");
-let segundos = 0;
-let timer;
+function relogio(){
+   ///configurar a hora
+   function criaHoradosSegundos(segundos){
+      const data = new Date(segundos  * 1000);
+      return data.toLocaleTimeString('pt-BR', {
+         hour12: false,
+         timeZone: 'UTC' //meia noite
+   });
+   }
 
-function inciaRelogio(){
-   timer = setInterval(function() {
-      segundos++;
-      relogiobtn.innerHTML = criaHoradosSegundos(segundos); //segundos formatados
-   }, 1000)
-};
+   const relogiobtn = document.querySelector(".relogio");
+   let segundos = 0;
+   let timer;
 
-//configurar a hora
-function criaHoradosSegundos(segundos){
-   const data = new Date(segundos  * 1000);
-   return data.toLocaleTimeString('pt-BR', {
-      hour12: false,
-      timeZone: 'UTC' //meia noite
+   function inciaRelogio(){
+      timer = setInterval(function() {
+         segundos++;
+         relogiobtn.innerHTML = criaHoradosSegundos(segundos); //segundos formatados
+      }, 1000)
+   } 
+
+   //add click
+   document.addEventListener('click', function(e) {
+   const el = e.target;
+
+      if(el.classList.contains('zerar')){
+         clearInterval(timer);
+         relogiobtn.innerHTML = '00:00:00';
+         segundos = '0';
+      }
+
+      if(el.classList.contains('inciar')){
+         clearInterval(timer); 
+         inciaRelogio();
+         relogiobtn.style.color = ' black';
+      }
+
+      if(el.classList.contains('pausar')){
+         clearInterval(timer); 
+         relogiobtn.style.color = 'red';
+      };
    });
 }
 
-console.log(criaHoradosSegundos(10))
+relogio();
 
 
-//add click
-iniciarBtn.addEventListener('click', function(event){
-   clearInterval(timer); 
-   inciaRelogio();
-   relogiobtn.style.color = ' black';
-});
 
-pausarBtn.addEventListener('click', function(event){
-     clearInterval(timer); 
-     relogiobtn.style.color = 'red'
-});
 
-zerarBtn.addEventListener('click', function(event){
-     clearInterval(timer);
-     relogiobtn.innerHTML = '00:00:00' 
-     segundos = '0'
-});
 
+
+
+
+   
+
+   
+
+   
