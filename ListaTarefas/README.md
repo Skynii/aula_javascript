@@ -5,4 +5,4 @@
 - [x]Caputurar evento no botão
 - [] função com tarefa com texto
 - []colocar evento no enter com keypress
-- [] função apra limpar o input
+- [] função apra limpar o input e mantem foco no input

@@ -14,10 +14,16 @@ inputTarefa.addEventListener('keypress', function(e){
    }
 });
 
+function limpaInput() {
+   inputTarefa.value ='';
+   inputTarefa.focus();
+}
+
 function criaTarefa(textoInput) {
    const li = criaLi()
    li.innerText = textoInput;
    tarefas.appendChild(li)
+   limpaInput();
 }  
 
 //*Função anonima
