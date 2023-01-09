@@ -48,4 +48,10 @@ document.addEventListener('click', function(e) {
    if (el.classList.contains('apagar')){
       el.parentElement.remove();
    }
-})
+});
+
+function salvarTarefas() {
+   const liTarefas = tarefas.querySelectorAll('li');
+   console.log(liTarefas)
+
+}
