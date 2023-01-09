@@ -19,11 +19,20 @@ function limpaInput() {
    inputTarefa.focus();
 }
 
+function criaBtnApagar(li) {
+   li.innerText += ' ';
+   const btnApagar = document.createElement('button');
+   btnApagar.innerText = 'Apagar';
+   li.appendChild(btnApagar);
+
+}
+
 function criaTarefa(textoInput) {
    const li = criaLi()
    li.innerText = textoInput;
    tarefas.appendChild(li)
    limpaInput();
+   criaBtnApagar(li);
 }  
 
 //*Função anonima
