@@ -46,6 +46,6 @@ document.addEventListener('click', function(e) {
    const el = e.target;
 
    if (el.classList.contains('apagar')){
-      console.log('apagar Clicado')
+      el.parentElement.remove();
    }
 })
