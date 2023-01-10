@@ -34,6 +34,7 @@ function criaTarefa(textoInput) {
    tarefas.appendChild(li)
    limpaInput();
    criaBtnApagar(li);
+   salvarTarefas();
 }  
 
 //*Função anonima
@@ -52,6 +53,14 @@ document.addEventListener('click', function(e) {
 
 function salvarTarefas() {
    const liTarefas = tarefas.querySelectorAll('li');
-   console.log(liTarefas)
+   const listaDeTarefas = [];
 
+   for (let tarefa of liTarefas) {
+      let tarefaTexto = tarefa.innerText;
+      tarefaTexto = tarefaTexto.replace('Apagar', '').trim();
+      listaDeTarefas.push(tarefaTexto);
+   }
+   
+   const tarefasJson = JSON.stringify(listaDeTarefas)
+   console.log(tarefasJson);
 }

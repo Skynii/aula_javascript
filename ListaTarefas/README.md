@@ -11,3 +11,4 @@
 - [] saber onde usuario clica para poder achar botao de apagar
 - [] achar elemento pai para apagar o li
 - [] salvar tarefas
+-transformar lista de tarefas em string em JSON para salvar
