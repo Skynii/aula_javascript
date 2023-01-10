@@ -12,3 +12,5 @@
 - [] achar elemento pai para apagar o li
 - [] salvar tarefas
 -transformar lista de tarefas em string em JSON para salvar
+-pegar tarefas salvas do local storage
+-agora nao apaga o local storage

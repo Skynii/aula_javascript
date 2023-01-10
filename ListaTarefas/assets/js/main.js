@@ -65,3 +65,15 @@ function salvarTarefas() {
    const tarefasJson = JSON.stringify(listaDeTarefas);
    localStorage.setItem('tarefas', tarefasJson);
 }
+
+function addTarefasSalvas() {
+   const tarefas = localStorage.getItem('tarefas');
+   const listaDeTarefas = JSON.parse(tarefas);
+   console.log(listaDeTarefas);
+
+   for(let tarefa of listaDeTarefas){
+      criaTarefa(tarefa)
+   }
+}
+
+addTarefasSalvas()
