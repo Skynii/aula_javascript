@@ -48,6 +48,7 @@ document.addEventListener('click', function(e) {
 
    if (el.classList.contains('apagar')){
       el.parentElement.remove();
+      salvarTarefas();
    }
 });
 
