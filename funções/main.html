@@ -1,0 +1,33 @@
+<html>
+
+   <script>
+      //Estudo de função
+
+   function funcao() {
+      console.log('oie')
+   }
+   
+   //passando parametros - Precisa colocar o index
+   function funcao2() {
+      console.log(arguments)
+      //somando os argumentos
+      let total = 0;
+      for(let argumento of arguments){
+         total += argumento
+      }
+      console.log(total)
+   }
+
+   function funcao3() {
+      let total = 0;
+      for (let argumento of arguments) {
+         total += argumento;
+      }
+      console.log(total)
+   }
+   funcao();
+   funcao3(1,2,3,4,5,6,7,7,7,7)
+   funcao2('harry','potter');
+
+   </script>
+</html>

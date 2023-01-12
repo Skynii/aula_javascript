@@ -5,7 +5,7 @@
 - [x] Capturar evento no botão
 - [] função com tarefa com texto
 - [] colocar evento no enter com keypress
-- [] função apra limpar o input e mantem foco no input
+- [] função para limpar o input e mantém foco no input
 - [] criar função para exxcluir atividade
 - [] colocar atibuto
 - [] saber onde usuario clica para poder achar botao de apagar
