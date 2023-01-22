@@ -39,5 +39,41 @@
    funcao4(2,1)
    funcao4(2, 10, 20)
    funcao4(2,undefined, 20) //só assim para ele assumir valor original de b
+
+   //!desestruturação
+
+   function funcao5 ({ nome, sobrenome, idade}) {
+      console.log(nome, sobrenome, idade);
+   }
+
+   let obj = {
+      nome: 'Érica',
+      sobrenome: 'Santos' ,
+      idade: 32
+   }
+
+   function desestruturacaoArray([valor1, valor2, valor3]) {
+      console.log(valor1, valor2, valor3);
+   }
+
+   desestruturacaoArray(['Érica Joice', 'Santos', 32])
+
+   funcao5(obj)
+
+   function conta(operador, acumulador, ...numeros){
+      console.log(operador, acumulador, numeros)
+
+      for( let numero of numeros) {
+         if (operador === '+') acumulador += numero;
+         if (operador === '-') acumulador -= numero;
+         if (operador === '/') acumulador /= numero;
+         if (operador === '*') acumulador *= numero;
+      }
+      console.log(acumulador)
+   }
+
+   conta('+', 0, 20,30,40,50);
+   conta('-', 1, 20,30,40,50);
+   conta('*', 1, 10, 20,30,50)
    </script>
 </html>
